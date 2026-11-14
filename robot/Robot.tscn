@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://3xmi6e0wv4q7"]
+
+[node name="Robot" type="Node2D" unique_id=75611093]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=302276207]
+position = Vector2(-52.999996, -139)
+scale = Vector2(1.8688525, 1.6470588)
+color = Color(0.87278324, 0.0006154961, 0.8735521, 1)
+polygon = PackedVector2Array(-2, -1, -2, 83, 59, 83, 59, -2)

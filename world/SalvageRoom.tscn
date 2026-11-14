@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://gul1wrqwybbi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3ycw"]
+size = Vector2(1151, 49)
+
+[node name="SalvageRoom" type="Node2D" unique_id=604564545]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=481481934]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1654455964]
+position = Vector2(576.5, 623.5)
+shape = SubResource("RectangleShape2D_m3ycw")
+
+[node name="Polygon2D" type="Polygon2D" parent="Floor" unique_id=408985189]
+position = Vector2(0, 133.92065)
+scale = Vector2(1, 0.7936508)
+polygon = PackedVector2Array(-2, 647, 1152, 649, 1152, 586, -3, 586)
+
+[node name="RobotSpot" type="Marker2D" parent="." unique_id=1715603306]
+position = Vector2(575, 598)
+
+[node name="SalvageSpot" type="Marker2D" parent="." unique_id=613003845]
+position = Vector2(1081, 335)

@@ -1,0 +1,37 @@
+# Godot-generated files (keep source assets, .import metadata, and .cs.uid files)
+.godot/
+/android/
+
+# .NET build output and user settings
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Local IDE settings
+.vs/
+.vscode/
+.idea/
+
+# Export output
+/build/
+/builds/
+/exports/
+
+# Local environment files and signing credentials
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.keystore
+*.jks
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Local Codex instructions
+/AGENTS.local.md

@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://g2nmwajof5wr"]
+
+[ext_resource type="Script" uid="uid://de0k82tekpkf0" path="res://world/Main.cs" id="1_rqm65"]
+[ext_resource type="Script" uid="uid://cynv7r2kx41hq" path="res://player/Player.cs" id="2_cojv5"]
+[ext_resource type="PackedScene" uid="uid://cxjsdfq1fnfgx" path="res://ui/terminal/TerminalPanel.tscn" id="3_l4nkr"]
+[ext_resource type="PackedScene" uid="uid://3xmi6e0wv4q7" path="res://robot/Robot.tscn" id="4_o3y07"]
+[ext_resource type="PackedScene" uid="uid://gul1wrqwybbi" path="res://world/SalvageRoom.tscn" id="5_cojv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0nn8"]
+size = Vector2(1151, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yqmnc"]
+size = Vector2(98, 115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvdpe"]
+size = Vector2(65, 99)
+
+[node name="Main" type="Node2D" unique_id=335262929 node_paths=PackedStringArray("_player", "_playerCamera", "_terminalTrigger", "_terminalPanel", "_terminalCamera")]
+script = ExtResource("1_rqm65")
+_player = NodePath("Player")
+_playerCamera = NodePath("Player/PlayerCamera")
+_terminalTrigger = NodePath("HomeBase/Terminal")
+_terminalPanel = NodePath("UI/TerminalPanel")
+_terminalCamera = NodePath("TerminalCamera")
+
+[node name="HomeBase" type="Node2D" parent="." unique_id=764989481]
+
+[node name="Floor" type="StaticBody2D" parent="HomeBase" unique_id=1205109903]
+
+[node name="Collision" type="CollisionShape2D" parent="HomeBase/Floor" unique_id=1798711782]
+position = Vector2(576.5, 620.5)
+shape = SubResource("RectangleShape2D_n0nn8")
+
+[node name="Polygon2D" type="Polygon2D" parent="HomeBase/Floor" unique_id=319858429]
+color = Color(0.55245954, 0.5355307, 0.50318265, 1)
+polygon = PackedVector2Array(-1, 595, 1152, 595, 1152, 646, -1, 646)
+
+[node name="Terminal" type="Area2D" parent="HomeBase" unique_id=128480899]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeBase/Terminal" unique_id=268398277]
+position = Vector2(682, 537.5)
+shape = SubResource("RectangleShape2D_yqmnc")
+
+[node name="Polygon2D" type="Polygon2D" parent="HomeBase/Terminal" unique_id=159806378]
+color = Color(0.19607843, 1, 1, 1)
+polygon = PackedVector2Array(643, 594, 643, 501, 719, 501, 719, 593)
+
+[node name="RobotDock" type="Marker2D" parent="HomeBase" unique_id=97777043]
+position = Vector2(1045, 595)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1184414479]
+script = ExtResource("2_cojv5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=135789700]
+position = Vector2(59.5, 532.5)
+shape = SubResource("RectangleShape2D_dvdpe")
+
+[node name="Polygon2D" type="Polygon2D" parent="Player" unique_id=2032878699]
+position = Vector2(-43, -2)
+color = Color(0.613864, 0.4207185, 0.16527715, 1)
+polygon = PackedVector2Array(67, 585, 136, 585, 136, 484, 67, 484)
+
+[node name="PlayerCamera" type="Camera2D" parent="Player" unique_id=845119946]
+position = Vector2(59.5, 324)
+zoom = Vector2(0.6, 0.6)
+limit_top = 0
+limit_bottom = 648
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=381878778]
+
+[node name="TerminalPanel" parent="UI" unique_id=907716754 instance=ExtResource("3_l4nkr")]
+offset_left = 39.0
+offset_top = 38.0
+offset_right = -553.0
+offset_bottom = -207.0
+
+[node name="Robot" parent="." unique_id=75611093 instance=ExtResource("4_o3y07")]
+position = Vector2(1045, 598)
+
+[node name="SalvageRoom" parent="." unique_id=604564545 instance=ExtResource("5_cojv5")]
+position = Vector2(1155, 0)
+
+[node name="TerminalCamera" type="Camera2D" parent="." unique_id=1637585258]
+position = Vector2(901.65, 324)
+zoom = Vector2(0.6, 0.6)

@@ -1,0 +1,162 @@
+[gd_resource type="Theme" format=3 uid="uid://58qap35mhxce"]
+
+[ext_resource type="FontFile" uid="uid://c3eg1j6wcydrq" path="res://theme/fonts/JetBrainsMono/JetBrainsMono-Regular.ttf" id="1_5yark"]
+
+[sub_resource type="DPITexture" id="DPITexture_0g1c0"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><g fill=\"#fefffe\" fill-opacity=\".85\"><path d=\"M14.5 1.5h-13v13L8 9.25l6.5 5.25z\"/><path stroke=\"#fefffe\" stroke-linejoin=\"round\" stroke-opacity=\".85\" d=\"M14.5 1.5h-13v13L8 9.25l6.5 5.25z\"/></g></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_8samd"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#ff5d5d\" fill-opacity=\".5\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_gaarc"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"none\" stroke=\"#b2b2b2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-opacity=\".45\" stroke-width=\"2\" d=\"m5 7 3 3 3-3\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_0t8ni"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\"><path fill=\"#fff\" d=\"M10 3a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1zM3 5.75a1 1 0 0 1 1.414-1.414L6 5.922l1.586-1.586A1 1 0 0 1 9 5.75L6.707 8.043a1 1 0 0 1-1.414 0z\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_nhg1x"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"gray\" d=\"M0 0v8h8V0zm8 8v8h8V8z\"/><path fill=\"#fff\" d=\"M8 0v8h8V0zm0 8H0v8h8z\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_70l4u"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"none\" stroke=\"#b2b2b2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-opacity=\".45\" stroke-width=\"2\" d=\"m6 11 3-3-3-3\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_acd5a"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\"><path fill=\"#fff\" d=\"M3 2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zm2.75 7a1 1 0 0 1-1.414-1.414L5.922 6 4.336 4.414A1 1 0 0 1 5.75 3l2.293 2.293a1 1 0 0 1 0 1.414z\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_33d6a"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"8\"><path fill=\"#fefffe\" fill-opacity=\".25\" d=\"M4 0a4 4 0 0 0 0 8h6a4 4 0 0 0 0-8zM3 3a1 1 0 0 1 0 2 1 1 0 0 1 0-2zm4 0a1 1 0 0 1 0 2 1 1 0 0 1 0-2zm4 0a1 1 0 0 1 0 2 1 1 0 0 1 0-2z\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_dmtbk"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"8\" height=\"8\"><circle cx=\"4\" cy=\"4\" r=\"1.5\" fill=\"#b2b2b2\" fill-opacity=\".25\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_wdees"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"8\" height=\"8\"><path fill=\"#b2b2b2\" fill-opacity=\".25\" d=\"M6 0v8h2V0zM1 0a1 1 0 0 0-.693 1.705L2.6 3.998.307 6.291A1 1 0 0 0 1.72 7.705l3-3a1 1 0 0 0 0-1.414l-3-3A1 1 0 0 0 1 0z\"/></svg>
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxujt"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.14117648, 0.22745098, 0.24313726, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i13jg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07843137, 0.15294118, 0.17254902, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.59607846, 0.8156863, 0.78431374, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7l0oh"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07843137, 0.15294118, 0.17254902, 1)
+border_width_bottom = 2
+border_color = Color(0.26666668, 0.38431373, 0.40392157, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_paxuf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07843137, 0.15294118, 0.17254902, 1)
+border_width_bottom = 2
+border_color = Color(0.26666668, 0.38431373, 0.40392157, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[resource]
+CodeEdit/colors/background_color = Color(0.07843137, 0.15294118, 0.17254902, 1)
+CodeEdit/colors/bookmark_color = Color(0.7058824, 0.7490196, 0.8745098, 1)
+CodeEdit/colors/brace_mismatch_color = Color(0.8745098, 0.74509805, 0.627451, 1)
+CodeEdit/colors/breakpoint_color = Color(0.7882353, 0.6784314, 0.8156863, 1)
+CodeEdit/colors/caret_background_color = Color(0.07843137, 0.15294118, 0.17254902, 1)
+CodeEdit/colors/caret_color = Color(0.59607846, 0.8156863, 0.78431374, 1)
+CodeEdit/colors/code_folding_color = Color(0.62352943, 0.7294118, 0.7254902, 1)
+CodeEdit/colors/completion_background_color = Color(0.14117648, 0.22745098, 0.24313726, 1)
+CodeEdit/colors/completion_existing_color = Color(0.7058824, 0.7490196, 0.8745098, 1)
+CodeEdit/colors/completion_scroll_color = Color(0.26666668, 0.38431373, 0.40392157, 1)
+CodeEdit/colors/completion_scroll_hovered_color = Color(0.62352943, 0.7294118, 0.7254902, 1)
+CodeEdit/colors/completion_selected_color = Color(0.26666668, 0.38431373, 0.40392157, 1)
+CodeEdit/colors/current_line_color = Color(0.14117648, 0.22745098, 0.24313726, 1)
+CodeEdit/colors/executing_line_color = Color(0.59607846, 0.8156863, 0.78431374, 1)
+CodeEdit/colors/folded_code_region_color = Color(0.14117648, 0.22745098, 0.24313726, 1)
+CodeEdit/colors/font_color = Color(0.88235295, 0.93333334, 0.91764706, 1)
+CodeEdit/colors/font_outline_color = Color(0.07843137, 0.15294118, 0.17254902, 1)
+CodeEdit/colors/font_placeholder_color = Color(0.62352943, 0.7294118, 0.7254902, 1)
+CodeEdit/colors/font_readonly_color = Color(0.62352943, 0.7294118, 0.7254902, 1)
+CodeEdit/colors/font_selected_color = Color(0.88235295, 0.93333334, 0.91764706, 1)
+CodeEdit/colors/line_length_guideline_color = Color(0.26666668, 0.38431373, 0.40392157, 1)
+CodeEdit/colors/line_number_color = Color(0.62352943, 0.7294118, 0.7254902, 1)
+CodeEdit/colors/search_result_border_color = Color(0.8745098, 0.74509805, 0.627451, 1)
+CodeEdit/colors/search_result_color = Color(0.26666668, 0.38431373, 0.40392157, 1)
+CodeEdit/colors/selection_color = Color(0.26666668, 0.38431373, 0.40392157, 1)
+CodeEdit/colors/syntax_comment_color = Color(0.62352943, 0.7294118, 0.7254902, 1)
+CodeEdit/colors/syntax_function_color = Color(0.59607846, 0.8156863, 0.78431374, 1)
+CodeEdit/colors/syntax_keyword_color = Color(0.7882353, 0.6784314, 0.8156863, 1)
+CodeEdit/colors/syntax_member_color = Color(0.88235295, 0.93333334, 0.91764706, 1)
+CodeEdit/colors/syntax_number_color = Color(0.8745098, 0.74509805, 0.627451, 1)
+CodeEdit/colors/syntax_string_color = Color(0.7647059, 0.8392157, 0.7058824, 1)
+CodeEdit/colors/syntax_symbol_color = Color(0.7058824, 0.7490196, 0.8745098, 1)
+CodeEdit/colors/word_highlighted_color = Color(0.14117648, 0.22745098, 0.24313726, 1)
+CodeEdit/constants/completion_lines = 7
+CodeEdit/constants/completion_max_width = 50
+CodeEdit/constants/completion_scroll_width = 6
+CodeEdit/constants/line_spacing = 4
+CodeEdit/constants/outline_size = 0
+CodeEdit/font_sizes/font_size = 12
+CodeEdit/fonts/font = ExtResource("1_5yark")
+CodeEdit/icons/bookmark = SubResource("DPITexture_0g1c0")
+CodeEdit/icons/breakpoint = SubResource("DPITexture_8samd")
+CodeEdit/icons/can_fold = SubResource("DPITexture_gaarc")
+CodeEdit/icons/can_fold_code_region = SubResource("DPITexture_0t8ni")
+CodeEdit/icons/completion_color_bg = SubResource("DPITexture_nhg1x")
+CodeEdit/icons/executing_line = SubResource("DPITexture_70l4u")
+CodeEdit/icons/folded = SubResource("DPITexture_70l4u")
+CodeEdit/icons/folded_code_region = SubResource("DPITexture_acd5a")
+CodeEdit/icons/folded_eol_icon = SubResource("DPITexture_33d6a")
+CodeEdit/icons/space = SubResource("DPITexture_dmtbk")
+CodeEdit/icons/tab = SubResource("DPITexture_wdees")
+CodeEdit/styles/completion = SubResource("StyleBoxFlat_cxujt")
+CodeEdit/styles/focus = SubResource("StyleBoxFlat_i13jg")
+CodeEdit/styles/normal = SubResource("StyleBoxFlat_7l0oh")
+CodeEdit/styles/read_only = SubResource("StyleBoxFlat_paxuf")
