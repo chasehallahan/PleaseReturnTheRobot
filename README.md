@@ -1,10 +1,10 @@
 # Please Return the Robot
 
-A 2D robot-salvage game prototype built with Godot and C#. A personal project for learning the engine, with an in-game Lua terminal taking shape.
+A 2D robot-salvage game built with Godot and C#.
 
 ## Current state
 
-The prototype includes player movement and jumping, a home base and salvage room, a placeholder robot, and a terminal editor with basic Lua syntax highlighting. Lua execution and programmable robot behavior are not implemented yet; the terminal's sample script is illustrative.
+The prototype includes player movement, a home base and salvage room, a placeholder robot, and a terminal editor with basic Lua syntax highlighting.
 
 ## Run locally
 
@@ -20,17 +20,6 @@ The prototype includes player movement and jumping, a home base and salvage room
 
 3. Import `project.godot` in the Godot .NET editor and let the assets finish importing.
 4. Press **F5** to run the startup scene, `world/Main.tscn`.
-
-### Controls
-
-| Action | Key |
-| --- | --- |
-| Move | A / D or Left / Right arrows |
-| Jump | Space |
-| Open terminal when nearby | E |
-| Close terminal | Esc |
-
-Player movement is disabled while the terminal is open.
 
 ## Project layout
 
@@ -51,6 +40,4 @@ Commit source assets, `.import` metadata, and `.cs.uid` files alongside scenes a
 ## Credits and licensing
 
 - JetBrains Mono is bundled under the [SIL Open Font License 1.1](theme/fonts/JetBrainsMono/OFL.txt).
-- LuaCSharp 0.5.8 is referenced through NuGet for the planned scripting integration.
-
-No license has been selected for the project's own code and assets.
+- LuaCSharp 0.5.8 is referenced through NuGet for the scripting integration.
