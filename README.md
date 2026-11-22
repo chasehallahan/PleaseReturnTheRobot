@@ -1,43 +1,43 @@
 # Please Return the Robot
 
-A 2D robot-salvage game built with Godot and C#.
+A programming and automation game about exploring abandoned ships with salvage robots. Write the routine, recover what you can, and leave enough power to get home.
 
-## Current state
+## The game
 
-The prototype includes player movement, a home base and salvage room, a placeholder robot, and a terminal editor with basic Lua syntax highlighting.
+Your base docks with a derelict ship. You walk over to the terminal and write Lua programs that send your robot through its rooms, searching for useful scrap and equipment. Watch the trip unfold, improve your program, and send it out again.
 
-## Run locally
+Getting the salvage is only part of the job. Cargo space is limited, batteries run down, and the robot needs a route back to unload and recharge. Better equipment helps, but so does a better program.
 
-- **Godot 4.7.2 .NET** editor, matching `Godot.NET.Sdk` in the project file.
-- **.NET SDK 8 or newer** to build the desktop project, which targets `net8.0`. CI uses .NET SDK 10.
+### Planned gameplay
 
-1. Clone this repository.
-2. From the project root, restore packages and compile:
+- **Program in real Lua.** Start with a few commands and build toward loops, decisions, and reusable routines.
+- **Explore room by room.** Discover what lies beyond each door in a side-on cutaway view shared by your base and the ship.
+- **Automate the whole trip.** Collect salvage, manage cargo and battery reserves, return to base, and prepare for the next run.
+- **Grow your operation.** Turn recovered materials into upgrades and take on procedurally generated ships of increasing size and complexity.
 
-   ```powershell
-   dotnet build '.\Please Return the Robot.csproj'
-   ```
+## Development status
 
-3. Import `project.godot` in the Godot .NET editor and let the assets finish importing.
-4. Press **F5** to run the startup scene, `world/Main.tscn`.
+The current prototype has a walkable base, a salvage room, a placeholder robot, and a terminal editor with Lua syntax highlighting. Script execution, robot automation, and the wider progression described above are still to come.
 
-## Project layout
+Built with Godot .NET and C#.
 
-| Path | Contents |
-| --- | --- |
-| `world/` | Startup scene, home base, salvage room, and terminal interaction |
-| `player/` | Player movement |
-| `robot/` | Robot scene |
-| `ui/terminal/` | Terminal editor scene and syntax highlighting |
-| `theme/` | Shared UI theme, world palette, and fonts |
+<details>
+<summary>Run the development build</summary>
 
-## Development
+Use the **Godot 4.7.2 .NET editor** and **.NET SDK 8 or newer**. From the project root:
 
-Run the build command above after C# changes and playtest affected behavior in Godot. GitHub Actions compiles the project on pushes and pull requests; it does not playtest or export the game.
+```powershell
+dotnet build '.\Please Return the Robot.csproj'
+```
 
-Commit source assets, `.import` metadata, and `.cs.uid` files alongside scenes and scripts. Godot's `.godot/` cache, build output, and local editor settings are ignored. Project conventions are in [AGENTS.md](AGENTS.md).
+Import `project.godot` in Godot, let the assets finish importing, and press **F5**.
+
+**Controls:** A/D or arrow keys to move, Space to jump, E near the terminal to open it, and Esc to close it.
+
+</details>
 
 ## Credits and licensing
 
-- JetBrains Mono is bundled under the [SIL Open Font License 1.1](theme/fonts/JetBrainsMono/OFL.txt).
-- LuaCSharp 0.5.8 is referenced through NuGet for the scripting integration.
+Copyright (c) 2026 Chase Hallahan. All rights reserved. The game's original code, documentation, and assets are proprietary; see [LICENSE](LICENSE).
+
+External providers retain their own licenses. See [third-party notices](THIRD_PARTY_NOTICES.md) for credits and license texts.

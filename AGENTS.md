@@ -2,6 +2,13 @@
 
 If `AGENTS.local.md` exists at the project root, read it before starting work for additional instructions specific to this checkout.
 
+## Design notes and plans
+
+- The Obsidian vault is `C:\Obsidian\Game Design`; this game's notes are in `Please Return the Robot/`. Read the vault's `AGENTS.md` before working with its notes.
+- Start with `Please Return the Robot/Overview.md` for design context. Read the relevant `Design/`, `Plans/`, and `Research/` notes for the task; proposals and unchecked plans do not establish implemented behavior. Verify implementation claims against the repository.
+- Save game design in `Design/`, implementation plans and checklists in `Plans/`, and experiments, findings, and sources in `Research/`. Keep the overview at the game folder's root and superseded notes in `Archive/`. Shared material across games belongs in the vault's `Reference/` folder.
+- Keep durable design notes and plans in the vault rather than duplicating them in the repository. The repository owns code, setup, and development instructions. Use Obsidian to move or rename notes so inbound links stay intact.
+
 ## Project setup
 
 - Open the project with the Godot .NET editor. Match the Godot SDK version and .NET target declared in the C# project file.
