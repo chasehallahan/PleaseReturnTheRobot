@@ -1,0 +1,205 @@
+[gd_scene format=3 uid="uid://cxjsdfq1fnfgx"]
+
+[ext_resource type="Script" uid="uid://d4qrjvcnhf6" path="res://ui/workstation/WorkstationScreen.cs" id="1_63pls"]
+[ext_resource type="Texture2D" uid="uid://dbqabrg5adh6j" path="res://theme/icons/griddy-icons--code-deploy.svg" id="2_xgquw"]
+[ext_resource type="Script" uid="uid://dyrkrf3ylhg1o" path="res://ui/workstation/CameraFeed.cs" id="3_v3srb"]
+
+[sub_resource type="DPITexture" id="DPITexture_standby"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\"><g fill=\"none\" stroke=\"#ffffff\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3.5\" y=\"6.5\" width=\"12\" height=\"11\" rx=\"1.5\"/><path d=\"M15.5 10.5l5-3v9l-5-3\"/><path d=\"M4 3.5l16 17\"/></g></svg>
+"
+
+[node name="WorkstationScreen" type="Control" unique_id=907716754 node_paths=PackedStringArray("_editor", "_runButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_63pls")
+_editor = NodePath("MainSplit/WorkspaceSplit/EditorSplit/CodeEditor/CodeEdit")
+_runButton = NodePath("MainSplit/WorkspaceSplit/EditorSplit/CodeEditor/EditorToolbar/EditorHeader/RunButton")
+
+[node name="MainSplit" type="HSplitContainer" parent="." unique_id=103670159]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+split_offsets = PackedInt32Array(72)
+split_offset = 72
+
+[node name="WorkspaceSplit" type="VSplitContainer" parent="MainSplit" unique_id=1789890441]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+split_offsets = PackedInt32Array(120)
+split_offset = 120
+
+[node name="EditorSplit" type="HSplitContainer" parent="MainSplit/WorkspaceSplit" unique_id=220180687]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FileExplorer" type="ItemList" parent="MainSplit/WorkspaceSplit/EditorSplit" unique_id=926782992]
+custom_minimum_size = Vector2(120, 0)
+custom_maximum_size = Vector2(240, -1)
+layout_mode = 2
+
+[node name="CodeEditor" type="VBoxContainer" parent="MainSplit/WorkspaceSplit/EditorSplit" unique_id=1371188490]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EditorToolbar" type="PanelContainer" parent="MainSplit/WorkspaceSplit/EditorSplit/CodeEditor" unique_id=1314852146]
+layout_mode = 2
+theme_type_variation = &"ToolbarPanel"
+
+[node name="EditorHeader" type="HBoxContainer" parent="MainSplit/WorkspaceSplit/EditorSplit/CodeEditor/EditorToolbar" unique_id=262316297]
+layout_mode = 2
+
+[node name="FileTabs" type="TabBar" parent="MainSplit/WorkspaceSplit/EditorSplit/CodeEditor/EditorToolbar/EditorHeader" unique_id=1263034348]
+layout_mode = 2
+size_flags_horizontal = 3
+current_tab = 0
+tab_count = 1
+tab_0/title = "Main"
+
+[node name="RunButton" type="Button" parent="MainSplit/WorkspaceSplit/EditorSplit/CodeEditor/EditorToolbar/EditorHeader" unique_id=1921185835]
+layout_mode = 2
+tooltip_text = "Upload this routine to the robot"
+theme_type_variation = &"IconButton"
+text = "UPLOAD"
+icon = ExtResource("2_xgquw")
+icon_alignment = 2
+
+[node name="CodeEdit" type="CodeEdit" parent="MainSplit/WorkspaceSplit/EditorSplit/CodeEditor" unique_id=452743093]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "-- Salvage routine / R-01
+-- Leave enough power to get home.
+local reserve = 25
+local trips = 0
+ 
+local function return_to_base()
+    move(\"west\")
+    unload()
+    recharge()
+end
+ 
+while trips < 3 do
+    move(\"east\")
+    local room = scan()
+ 
+    if room.salvage then
+        while not cargo_full() do
+            salvage()
+            if battery() <= reserve then
+                break
+            end
+        end
+    end
+ 
+    return_to_base()
+    trips = trips + 1
+end
+ 
+print(\"Robot returned safely.\")"
+symbol_tooltip_on_hover = true
+gutters_draw_breakpoints_gutter = true
+gutters_draw_executing_lines = true
+gutters_draw_line_numbers = true
+code_completion_enabled = true
+indent_automatic = true
+auto_brace_completion_enabled = true
+auto_brace_completion_highlight_matching = true
+
+[node name="Terminal" type="PanelContainer" parent="MainSplit/WorkspaceSplit" unique_id=816680524]
+custom_minimum_size = Vector2(0, 120)
+custom_maximum_size = Vector2(-1, 240)
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="MainSplit/WorkspaceSplit/Terminal" unique_id=148149848]
+layout_mode = 2
+
+[node name="TitleBar" type="PanelContainer" parent="MainSplit/WorkspaceSplit/Terminal/Content" unique_id=1166491127]
+layout_mode = 2
+theme_type_variation = &"PanelHeader"
+
+[node name="Layout" type="HBoxContainer" parent="MainSplit/WorkspaceSplit/Terminal/Content/TitleBar" unique_id=1776040763]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MainSplit/WorkspaceSplit/Terminal/Content/TitleBar/Layout" unique_id=133336149]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"PanelTitle"
+text = "TERMINAL"
+
+[node name="System" type="Label" parent="MainSplit/WorkspaceSplit/Terminal/Content/TitleBar/Layout" unique_id=2117030488]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "SALVAGE OS 3.1"
+
+[node name="Output" type="RichTextLabel" parent="MainSplit/WorkspaceSplit/Terminal/Content" unique_id=1043089141]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[color=#9fbab9]04:12:07  dock online
+04:12:07  units issued 3 · returned 0
+04:12:08  [color=#dfbea0]notice[/color]  please return the robot
+memo: all units remain company property.[/color]
+[color=#98d0c8]> █[/color]"
+
+[node name="CameraFeed" type="PanelContainer" parent="MainSplit" unique_id=408935746 node_paths=PackedStringArray("_feedViewport")]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("3_v3srb")
+_feedViewport = NodePath("Content/FeedContainer/FeedViewport")
+
+[node name="Content" type="VBoxContainer" parent="MainSplit/CameraFeed" unique_id=764246900]
+layout_mode = 2
+
+[node name="TitleBar" type="PanelContainer" parent="MainSplit/CameraFeed/Content" unique_id=1904946445]
+layout_mode = 2
+theme_type_variation = &"PanelHeader"
+
+[node name="Title" type="Label" parent="MainSplit/CameraFeed/Content/TitleBar" unique_id=1276533381]
+layout_mode = 2
+theme_type_variation = &"PanelTitle"
+text = "CAMERA FEED"
+
+[node name="Standby" type="CenterContainer" parent="MainSplit/CameraFeed/Content" unique_id=1737637763]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Layout" type="VBoxContainer" parent="MainSplit/CameraFeed/Content/Standby" unique_id=2031505747]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MainSplit/CameraFeed/Content/Standby/Layout" unique_id=1917446874]
+self_modulate = Color(0.26666668, 0.38431373, 0.40392157, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("DPITexture_standby")
+
+[node name="Message" type="Label" parent="MainSplit/CameraFeed/Content/Standby/Layout" unique_id=1929233875]
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "FEED STANDBY"
+horizontal_alignment = 1
+
+[node name="FeedContainer" type="SubViewportContainer" parent="MainSplit/CameraFeed/Content" unique_id=397591672]
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="FeedViewport" type="SubViewport" parent="MainSplit/CameraFeed/Content/FeedContainer" unique_id=306756937]
+disable_3d = true
+handle_input_locally = false
+size = Vector2i(502, 618)
+render_target_update_mode = 4
+
+[node name="FeedCamera" type="Camera2D" parent="MainSplit/CameraFeed/Content/FeedContainer/FeedViewport" unique_id=293801688]
+position = Vector2(1045, 525)

@@ -1,5 +1,7 @@
 using Godot;
 
+namespace PleaseReturntheRobot;
+
 public partial class Player : CharacterBody2D
 {
     [Export] private float WalkSpeed { get; set; } = 300f;
